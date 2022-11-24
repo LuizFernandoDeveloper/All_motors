@@ -1,0 +1,21 @@
+footer{
+    background-color:#192a56;
+    color: #fff;
+    padding-top: 16px;
+}
+footer ul li {
+    overflow: hidden;
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer ul li img{
+    height: 32px;
+
+}
+
+footer .container{
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}

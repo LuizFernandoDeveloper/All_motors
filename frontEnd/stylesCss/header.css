@@ -2,6 +2,8 @@ header{
     background-color: #192a56;
     padding-top: 16px;
     color: #fff;
+    width: 100%;
+
 }
 
 header > .container{
@@ -10,13 +12,15 @@ header > .container{
     align-items: center;
     padding-bottom: 16px;
 }
+
 header > .container > h1{
     overflow: hidden;
 }
+
 nav{
     background-color: #575fcf;
     padding: 16px 0;
-    
+    display: none;
 }
 nav > .container > ul{
     overflow: hidden;
@@ -55,3 +59,8 @@ nav li a {
     margin-bottom: 4px;    
 }
 
+header{
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}

@@ -1,0 +1,43 @@
+.form-campo{
+    margin-bottom:16px;
+    overflow: hidden;
+}
+
+.form-campo label{
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form-campo textarea{
+    resize: none;
+    height: 120px;
+    width: 360px;
+}
+
+form{
+    max-width: 360px;
+    
+}
+
+form button{
+    display: block;
+    width: 120px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #119759;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+
