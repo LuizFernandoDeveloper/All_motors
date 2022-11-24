@@ -1,0 +1,66 @@
+.container-flex{
+    display: flex;
+}
+section{
+    padding: 48px 0;
+}
+#sobre-a-loja img{
+    max-width: 400px;
+    margin-right: 24px;
+}
+section h2 {
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+section h3 {
+    overflow: hidden;
+}
+
+.lista-veiculos{
+    flex-wrap: wrap;
+}
+
+.lista-veiculos li{
+    list-style: none;
+    max-width: 28%;
+    overflow: hidden;
+}
+
+.lista-veiculos li img {
+    max-width: 100%;
+    
+}
+
+.lista-veiculos li h3 {
+    margin: 16px 0;
+}
+
+.item-central{
+    margin-right: 5%;
+    margin-bottom: 30px;
+}
+
+.lista-veiculos li button{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #119759;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+.lista-veiculos li strong{
+    display: block;
+    margin: 16px 0;
+    overflow: hidden;
+}
+
+.price{
+    margin: 16px 0;
+    display: block;
+}

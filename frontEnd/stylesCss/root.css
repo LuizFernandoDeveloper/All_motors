@@ -3,4 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+p{
+    overflow: hidden;
+}
+
+h2{
+    overflow: hidden;
 }
