@@ -22,6 +22,7 @@ nav{
     padding: 16px 0;
     display: none;
 }
+
 nav > .container > ul{
     overflow: hidden;
 }
