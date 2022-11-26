@@ -197,19 +197,19 @@
             <form>
                 <div class="form-campo">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome">
+                    <input name="nome" type="text" id="nome" placeholder="Digite seu nome">
                 </div>
                 <div class="form-campo">
                     <label for="Telefone">Telefone:</label>
-                    <input type="tel" placeholder="Digite seu Telefone" id="telefone">
+                    <input name="telefone" type="tel" placeholder="Digite seu Telefone" id="telefone">
                 </div>
                 <div class="form-campo">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" placeholder="Digite seu E-mail">
+                    <input name="email" type="email" id="email" placeholder="Digite seu E-mail">
                 </div>
                 <div class="form-campo">
                     <label for="Veiculo-interesse">Veículo de interesse:</label>
-                    <input type="text" id="veiculo-interesse" placeholder="Digite o nome do veículo que você tem interesse:">
+                    <input name="veiculo" type="text" id="veiculo-interesse" placeholder="Digite o nome do veículo que você tem interesse:">
                 </div>
                 <div class="form-campo">
                     <label for="mensagem">mensagem</label>
@@ -246,7 +246,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="luiz.fernando.developer@outlook.com">
+                    <a href="mailto:luiz.fernando.developer@outlook.com" >
                         <img src="./images/icones/logo-outlook-icon.svg" alt="Outlook">
                     </a>
                 </li>
@@ -257,6 +257,9 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./javaScript/jquery.mask.min.js"></script>
+    <script src="./javaScript/jquery.validate.min.js"></script>
+    <script src="./javaScript/messages_pt_BR.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $('#carrosel-imagens').slick({
@@ -265,6 +268,45 @@
             $('.menu-hamburguer').click(function(){
                 $('nav').slideToggle();
             });
+            $('#telefone').mask('(00) 00000-0000');
+            $('form').validate({
+                rules: {
+                    nome:{
+                        required: true
+                    },
+                    email:{
+                        required: true,
+                        email:true
+                    },
+                    telefone: {
+                        required:true
+                    },
+                    veiculo:{
+                        required: true
+                    },
+                    mensagem:{
+                        required: true
+                    }
+                },
+                messages:{
+                    nome: 'Por favor, insira o seu nome!',
+                    email: 'Por favor, insira seu E-mail!',
+                    telefone: 'Por favor insira seu telefone!',
+                    veiculo: 'Digite o nome do veiculo que você tem interesse',
+                    mensagem: 'Digite sua mensagem'
+                },
+                submitHandler:function(form){
+                    alert('Enviado com sucesso');   
+                },
+                invalidHandler:function(evento, validador){
+                    let camposIncorretos = validador.numberOfInvalids();
+                    if (camposIncorretos){
+                        alert(`Existem ${camposIncorretos} campos não preenchidos.`);
+                    }
+                }
+
+            });
+        
         });
     </script>
 </body>
