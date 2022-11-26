@@ -41,15 +41,13 @@
                         alert(`Existem ${camposIncorretos} campos não preenchidos.`);
                     }
                 }
-
             });
-        
         });
 $('.lista-veiculos button').click(function(){
     const destino  = $('#contato');
     const carro = $(this).parent().find('h3').text()
     $('html').animate({
         scrollTop:  destino.offset().top
-    }, 1000)
+    }, 1000);
     $('#veiculo-interesse').val(carro);
 });
